@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.jms.ConnectionFactory;
 
 /**
- * Created by Ran on 19/4/2018.
+ * Created by Jeremy on 19/4/2018.
  */
 @Configuration
 public class ActiveMQComponentConfig {

@@ -20,6 +20,7 @@ public class EntryRoute extends RouteBuilder {
 
         from(MQ_DURABLE_SUBSCRIBER).routeId("RouteFromMQ")
             .log("receiving file from topic")
+            .to("log:throughput?groupSize=10&groupDelay=1000")
             .to(FILE_OUTBOUND);
 
         from(FILE_INBOUND).routeId("RouteToMQ")
